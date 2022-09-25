@@ -18,15 +18,17 @@
 
       padding: 0;
       margin: 0;
+
+      min-width: 700px;
     }
 
     
     main {
+      margin: auto;
 
-      margin: 10% auto;
-      
+      padding: 175px 0 0 ;
+
       display: flex;
-      background-color: #fff;
 
       width: 800px;
 
@@ -34,34 +36,87 @@
     }
 
     .imageGrid img{
-      margin-right: 30px;
-
       border-radius: 20px 0 0px 20px;
     }
 
     .content {
-      padding:10px 5px;
-    }
+      background-color: #fff;
+      border-radius: 0 20px 20px 0;
 
-    h4 {
-      letter-spacing: 5px;
+      padding:10px 50px 10px 35px;
+    
+      height: 555px;
+      width: 275px;
+    }
+    
+    h4, p {
+      font-size: 14px;
       font-family: 'Montserrat', sans-serif;
+
+      color:  hsl(228, 12%, 48%);
+      letter-spacing: 2.1px;
+      line-height: 1.5;
+
+      text-align: justify;
     }
-
-    h1 {
-      margin-top: 0;
-
+    
+    h1:last-child {
+      margin: 0 0  50px;
+      
+      color: hsl(212, 21%, 14%);
+      font-family: 'Fraunces', serif;
+      letter-spacing: 2.5px;
+      line-height: 1;
       font-size: 2.5rem;
     }
 
-    p {
-      font-size: 16px;
-      font-family: 'Montserrat', sans-serif;
+    .prices {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px 0 0;
+    }
 
-      line-height: 1.5;
+    .prices h1 {
+
+      color: hsl(158, 36%, 37%);
+
+      font-size: 3rem;
+    }
+
+    .prices h3 {
+      color:  hsl(228, 12%, 48%);
+
+      position: relative;
+      top: 30px;
+      left: 15px;
+
+      text-decoration: line-through;
+    }
+
+    .buttonCart {
+      position: absolute;
+      overflow-wrap: break-word;
+    }
+
+    .buttonCart img {
+      position: relative;
+      top:2px;
+      left:90px;
+    }
+
+    .buttonCart button{
+      border: none;
+      color: white;
+
+      padding: 20px 100px;
+      background-color: hsl(158, 36%, 37%);
+
+
+      border-radius: 10px;
     }
 
     .attribution { 
+      margin-top: 140px;
       font-size: 11px; text-align: center;
     }
     
@@ -76,7 +131,7 @@
 
   <main>
     <div class="imageGrid">
-      <img src="images/image-product-desktop.jpg" alt="PerfumeImage" style="width:400px; height: 600px;">
+      <img src="images/image-product-desktop.jpg" alt="PerfumeImage" style="width:400px; height: 575px;">
     </div>
   
     <div class="content">
@@ -96,10 +151,11 @@
       
       <div class="prices">
         <h1>$149.99</h1>
-        <h4>$169.99</h4>
+        <h3>$169.99</h3>
       </div>
   
       <div class="buttonCart">
+        <img src="images/icon-cart.svg" alt="">
         <button>Add to Cart</button>
       </div>
     
@@ -107,8 +163,8 @@
   </main>
   
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="ht4tps://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jonatan Trindade</a>.
   </div>
 </body>
 </html>
