@@ -19,7 +19,7 @@
       padding: 0;
       margin: 0;
 
-      min-width: 700px;
+      min-width: 375px;
     }
 
     
@@ -36,6 +36,9 @@
     }
 
     .imageGrid img{
+      width:400px; 
+      height: 575px;
+
       border-radius: 20px 0 0px 20px;
     }
 
@@ -65,6 +68,7 @@
       
       color: hsl(212, 21%, 14%);
       font-family: 'Fraunces', serif;
+      font-weight: 700;
       letter-spacing: 2.5px;
       line-height: 1;
       font-size: 2.5rem;
@@ -115,6 +119,10 @@
       border-radius: 10px;
     }
 
+    .buttonCart button:hover {
+      background-color: hsl(156, 40%, 16%);
+    }
+
     .attribution { 
       margin-top: 140px;
       font-size: 11px; text-align: center;
@@ -124,14 +132,55 @@
       color: hsl(228, 45%, 44%);
     }
 
+    @media screen and (max-width: 780px) {
+      main {
+        position: absolute;
+        bottom: 220px;
+
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .content {
+      }
+
+      .imageGrid img {
+        width:330px;
+
+        margin: 0 0 0 42px;
+      }
+
+      .attribution {
+        position: absolute;
+        bottom: 40px;
+        left: 256px;
+
+        margin-bottom: 20px;
+      }
+
+      .buttonCart button:focus {
+        background-color: hsl(156, 40%, 16%);
+      }
+      .buttonCart button:active {
+        background-color: hsl(156, 40%, 16%);
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      main {
+        display: none
+      };
+      
+    }
 
   </style>
 </head>
 <body>
 
-  <main>
+  <!-- Desktop Section -->
+  <main id="desktop">
     <div class="imageGrid">
-      <img src="images/image-product-desktop.jpg" alt="PerfumeImage" style="width:400px; height: 575px;">
+      <img src="images/image-product-desktop.jpg" alt="PerfumeImage">
     </div>
   
     <div class="content">
@@ -161,6 +210,9 @@
     
     </div>
   </main>
+
+  <!-- Mobile Version -->
+
   
   <div class="attribution">
     Challenge by <a href="ht4tps://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
