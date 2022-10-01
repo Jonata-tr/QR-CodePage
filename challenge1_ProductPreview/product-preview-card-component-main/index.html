@@ -1,222 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <style>
-    
-    body {
-      background-color:  hsl(30, 38%, 92%);
+    <title>Frontend Mentor | Product preview card component</title>
 
-      padding: 0;
-      margin: 0;
+    <style>
+      *{
+        margin: 0; 
+        padding: 0;
+        
+        box-sizing: border-box;
+      }
 
-      min-width: 375px;
-    }
-
-    
-    main {
-      margin: auto;
-
-      padding: 175px 0 0 ;
-
-      display: flex;
-
-      width: 800px;
-
-      border-radius: 20px;
-    }
-
-    .imageGrid img{
-      width:400px; 
-      height: 575px;
-
-      border-radius: 20px 0 0px 20px;
-    }
-
-    .content {
-      background-color: #fff;
-      border-radius: 0 20px 20px 0;
-
-      padding:10px 50px 10px 35px;
-    
-      height: 555px;
-      width: 275px;
-    }
-    
-    h4, p {
-      font-size: 14px;
-      font-family: 'Montserrat', sans-serif;
-
-      color:  hsl(228, 12%, 48%);
-      letter-spacing: 2.1px;
-      line-height: 1.5;
-
-      text-align: justify;
-    }
-    
-    h1:last-child {
-      margin: 0 0  50px;
-      
-      color: hsl(212, 21%, 14%);
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      line-height: 1;
-      font-size: 2.5rem;
-    }
-
-    .prices {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 40px 0 0;
-    }
-
-    .prices h1 {
-
-      color: hsl(158, 36%, 37%);
-
-      font-size: 3rem;
-    }
-
-    .prices h3 {
-      color:  hsl(228, 12%, 48%);
-
-      position: relative;
-      top: 30px;
-      left: 15px;
-
-      text-decoration: line-through;
-    }
-
-    .buttonCart {
-      position: absolute;
-      overflow-wrap: break-word;
-    }
-
-    .buttonCart img {
-      position: relative;
-      top:2px;
-      left:90px;
-    }
-
-    .buttonCart button{
-      border: none;
-      color: white;
-
-      padding: 20px 100px;
-      background-color: hsl(158, 36%, 37%);
-
-
-      border-radius: 10px;
-    }
-
-    .buttonCart button:hover {
-      background-color: hsl(156, 40%, 16%);
-    }
-
-    .attribution { 
-      margin-top: 140px;
-      font-size: 11px; text-align: center;
-    }
-    
-    .attribution a { 
-      color: hsl(228, 45%, 44%);
-    }
-
-    @media screen and (max-width: 780px) {
-      main {
+      body {
         position: absolute;
-        bottom: 220px;
-
+        background-color: hsl(30, 38%, 92%);
         overflow: hidden;
-        margin: 0;
+
+        width: 100vw;
+        height: 100vh;
+
       }
-
-      .content {
-      }
-
-      .imageGrid img {
-        width:330px;
-
-        margin: 0 0 0 42px;
-      }
-
-      .attribution {
-        position: absolute;
-        bottom: 40px;
-        left: 256px;
-
-        margin-bottom: 20px;
-      }
-
-      .buttonCart button:focus {
-        background-color: hsl(156, 40%, 16%);
-      }
-      .buttonCart button:active {
-        background-color: hsl(156, 40%, 16%);
-      }
-    }
-
-    @media screen and (max-width: 375px) {
-      main {
-        display: none
-      };
       
-    }
+      main {       
+        position: relative;
+        max-width: 100%;
+        height: 95vh;
 
-  </style>
-</head>
-<body>
+        padding-top: 10%;
+      }
+       .center{
+        display: flex;
+        justify-content: center;
 
-  <!-- Desktop Section -->
-  <main id="desktop">
-    <div class="imageGrid">
-      <img src="images/image-product-desktop.jpg" alt="PerfumeImage">
+       }
+
+      .image #desktopImg { 
+        width: 380px;
+        border-radius: 15px 0 0 15px;
+      }
+
+      div.content {
+        background-color: #fff;
+        border-radius: 0 15px 15px 0;
+        width: 380px;
+        height: 570px;  
+      }
+
+      div.attribution {
+        text-align: center;
+        padding-bottom: 10px;
+
+        height: 5vh;
+      }
+
+      @media screen and (max-width:650px){
+        .center {
+          flex-direction: column;     
+          position: relative;
+          max-width: 650px;
+          top: 10px;
+
+          height: 50vh;
+          width: 100vw;
+        }
+        div.image {
+          position: relative;
+          top: 4px;
+          margin: 0;
+        }
+
+        div.image #desktopImg {
+          height: 40vh;
+          border-radius: 15px 15px 0 0;          
+        }
+
+        div.content {
+          height: 45vh;
+          border-radius: 0 0 15px 15px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Desktop Section -->
+    <main id="desktop">
+      <div class="center">
+        <div class="image">
+        <img
+          id="desktopImg"
+          src="images/image-product-desktop.jpg"
+          alt="PerfumeImage"
+        />
+      </div>
+
+      <div class="content">
+        <h4>PERFUME</h4>
+        <div class="name">
+          <h1>
+            Gabrielle <br />
+            Essence Eau <br />
+            De Parfum
+          </h1>
+        </div>
+
+        <div class="description">
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+        </div>
+
+        <div class="prices">
+          <h1>$149.99</h1>
+          <h3>$169.99</h3>
+        </div>
+
+        <div class="buttonCart">
+          <img src="images/icon-cart.svg" alt="" />
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="ht4tps://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jonatan Trindade</a>.
     </div>
-  
-    <div class="content">
-      <h4>PERFUME</h4>
-      <div class="name">
-        <h1>
-          Gabrielle <br>
-          Essence Eau <br>
-          De Parfum</h1>
-      </div>
-      
-      <div class="description">
-        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-          Perfumer-Creator for the House of CHANEL.
-        </p>
-      </div>
-      
-      <div class="prices">
-        <h1>$149.99</h1>
-        <h3>$169.99</h3>
-      </div>
-  
-      <div class="buttonCart">
-        <img src="images/icon-cart.svg" alt="">
-        <button>Add to Cart</button>
-      </div>
-    
-    </div>
-  </main>
 
-  <!-- Mobile Version -->
+    <!-- Mobile Version -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="ht4tps://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jonatan Trindade</a>.
-  </div>
-</body>
+  </body>
 </html>
