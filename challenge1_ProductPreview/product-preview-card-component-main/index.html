@@ -21,37 +21,66 @@
     <title>Frontend Mentor | Product preview card component</title>
 
     <style>
-      *{
-        margin: 0; 
+      * {
+        margin: 0;
         padding: 0;
-        
+
         box-sizing: border-box;
       }
-
+      
       body {
         position: absolute;
         background-color: hsl(30, 38%, 92%);
         overflow: hidden;
-
-        width: 100vw;
+        
+        width: 100%;
         height: 100vh;
 
-      }
-      
-      main {       
-        position: relative;
         max-width: 100%;
-        height: 95vh;
-
-        padding-top: 10%;
       }
-       .center{
+
+      main {
+        position: relative;
+        width: 100%;
+        height: 92vh;
+
+        padding-top: 165px;
+      }
+      main h4, p{
+       color:  hsl(228, 12%, 48%);
+       margin-bottom: 20px;
+      }
+
+      h4{
+        letter-spacing: 3 px;
+      }
+
+      h1 {
+        color: hsl(212, 21%, 14%);
+        margin-bottom: 20px;
+        font-family: 'Fraunces', serif;
+        font-size: 2.3rem;        
+      }
+
+      .prices h1 {
+        color:hsl(158, 36%, 37%);
+      }
+
+      p {
+        font-size: 19px;
+        line-height: 1.7;
+        text-align:left;
+      }
+
+      .center {
         display: flex;
         justify-content: center;
+        font-family: 'Montserrat', sans-serif;
 
-       }
+        margin: 0;
+      }
 
-      .image #desktopImg { 
+      .image #desktopImg {
         width: 380px;
         border-radius: 15px 0 0 15px;
       }
@@ -60,26 +89,42 @@
         background-color: #fff;
         border-radius: 0 15px 15px 0;
         width: 380px;
-        height: 570px;  
+        height: 570px;
+      }
+
+      .content{
+        padding:50px 0 0 50px;
       }
 
       div.attribution {
-        text-align: center;
         padding-bottom: 10px;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
 
         height: 5vh;
       }
 
-      @media screen and (max-width:650px){
-        .center {
-          flex-direction: column;     
-          position: relative;
-          max-width: 650px;
-          top: 10px;
-
-          height: 50vh;
-          width: 100vw;
+      @media screen and (max-width: 766px) {
+        main {
+          padding-top: 0;
+          text-align: center;
+          width: 100%;
         }
+        .center {
+          display: inline-block;
+          max-width: 100%;
+          top: 40px;
+
+          width: 100%;
+        }
+
+        .content {
+          display: inline-block;
+          word-wrap: break-word;
+          width: 100px;
+        }
+
         div.image {
           position: relative;
           top: 4px;
@@ -88,7 +133,7 @@
 
         div.image #desktopImg {
           height: 40vh;
-          border-radius: 15px 15px 0 0;          
+          border-radius: 15px 15px 0 0;
         }
 
         div.content {
@@ -96,7 +141,6 @@
           border-radius: 0 0 15px 15px;
         }
       }
-
     </style>
   </head>
   <body>
@@ -104,40 +148,41 @@
     <main id="desktop">
       <div class="center">
         <div class="image">
-        <img
-          id="desktopImg"
-          src="images/image-product-desktop.jpg"
-          alt="PerfumeImage"
-        />
-      </div>
-
-      <div class="content">
-        <h4>PERFUME</h4>
-        <div class="name">
-          <h1>
-            Gabrielle <br />
-            Essence Eau <br />
-            De Parfum
-          </h1>
+          <img
+            id="desktopImg"
+            srcset="images/image-product-desktop.jpg,
+                    images/image-product-mobile.jpg 750w"
+            alt="PerfumeImage"
+          />
         </div>
 
-        <div class="description">
-          <p>
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </p>
-        </div>
+        <div class="content">
+          <h4>PERFUME</h4>
+          <div class="name">
+            <h1>
+              Gabrielle <br />
+              Essence Eau <br />
+              De Parfum
+            </h1>
+          </div>
 
-        <div class="prices">
-          <h1>$149.99</h1>
-          <h3>$169.99</h3>
-        </div>
+          <div class="description">
+            <p>
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+          </div>
 
-        <div class="buttonCart">
-          <img src="images/icon-cart.svg" alt="" />
-          <button>Add to Cart</button>
+          <div class="prices">
+            <h1>$149.99</h1>
+            <h4>$169.99</h4>
+          </div>
+
+          <div class="buttonCart">
+            <img src="images/icon-cart.svg" alt="" />
+            <button>Add to Cart</button>
+          </div>
         </div>
-      </div>
       </div>
     </main>
     <div class="attribution">
@@ -146,8 +191,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Jonatan Trindade</a>.
     </div>
-
     <!-- Mobile Version -->
-
   </body>
 </html>
