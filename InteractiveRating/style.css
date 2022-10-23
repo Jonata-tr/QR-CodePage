@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --bk:hsl(216, 12%, 8%);
+    --section-bk: rgba(24, 34, 47, 0.846);
+    --round: hsl(213, 19%, 18%);
+    --number: hsl(216, 12%, 54%);
+    --paragraph: hsl(217, 12%, 63%);
+    --header: hsl(0, 0%, 100%);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bk);
+    text-align: center;
+    margin: 1rem .5rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+section {
+    background-color: var(--section-bk);
+    width: 28rem;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    padding: 1.8rem;  
+    text-align: left;
+    border-radius: .7rem;
+}
+
+section div {
+    margin-bottom: 1rem;
+}
+
+.ratingStar {
+    position: relative;
+    background-color: var(--round);
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 100%;
+    text-align: center;
+}
+.ratingStar img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+h1 {
+    color: var(--header);
+}
+
+p {
+    color: var(--paragraph);
+    font-size: 1.1rem;
+}
+
+label {
+    position: absolute;
+    top: 100px;
+}
+
+.button {
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--round);
+    border: 0px;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.button input {
+    display: none;
+    border-style: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+#radio1:checked ~ .navigationAuto .auto-btn1 {
+	background-color: blue;
+}
+
+#subBtn {
+    border: none;
+    border-radius: 2rem;
+    width: 24.5rem;
+    height: 3.5rem;
+    letter-spacing: .2rem;
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media screen and (max-width:768px){
+    
+    section {
+        width: 23rem;
+        height: auto;
+    }
+
+    #subBtn {
+        width: 19rem;
+    }
+}
+
+@media screen and (max-width:375px){
+    section {
+        width: 18.5rem;
+    }     
+    
+    #subBtn {
+        width: 16rem;
+    }
+
+    .button {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
