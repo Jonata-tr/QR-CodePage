@@ -18,7 +18,7 @@
 <body>
 
   <main>
-    <section>
+    <section class="hidden">
       <div class="ratingStar">
         <img src="images/icon-star.svg" alt="">
       </div>
@@ -32,23 +32,44 @@
       </div>
 
       <div class="inputs">
-        <div id="area0" class="button"><input class="radio1" type="radio" name="rating"> 1</div>
-        <div id="area1" class="button"><input class="radio" type="radio" name="rating">2</div>
-        <div id="area2" class="button"><input class="radio" type="radio" name="rating">3</div>
-        <div id="area3" class="button"><input class="radio" type="radio" name="rating">4</div>
-        <div id="area4" class="button"><input class="radio" type="radio" name="rating">5</div>
+        
+        <label class="container">
+          <input type="radio" name="radio" value="1">
+          <span class="checkmark"><p>1</p></span>
+        </label>
+        
+        <label class="container">
+          <input type="radio" name="radio" value="2">  
+          <span class="checkmark"><p>2</p></span>
+        </label>
+        
+        <label class="container">
+          <input type="radio" name="radio" value="3">
+          <span class="checkmark"><p>3</p></span>
+        </label>
+        
+        <label class="container">
+          <input type="radio" name="radio" value="4">
+          <span class="checkmark"><p>4</p></span>
+        </label>
+       
+        <label class="container">
+          <input type="radio" name="radio" value="5">
+          <span class="checkmark"><p>5</p></span>
+        </label>
+                
       </div>
       
       <button id="subBtn" type="submit" onclick="getRating()">SUBMIT</button>
     </section>
 
-    <section class="hidden">
+    <section class="show">
       <div class="image">
-
+        <img src="./images/illustration-thank-you.svg">
       </div>
       
       <div class="ratingSelected">
-        <p> You selected <!-- Add rating here --> out of 5</p>
+        <p> You selected <span id="note"></span> out of 5</p>
       </div>
 
       <div class="thanks">
@@ -69,23 +90,6 @@
     </div>
   </footer>
 
-  <script>
-    const radio = document.querySelectorAll(".radio")
-    for(let i = 0; i < radio[i].length; i++){
-      radio[i].addEventListener("change", radioCall())
-      console.log("ola")
-    }
-    function radioCall(){
-    for(i = 0; i < radio.length; i++){
-        if(radio[cheked]){
-          radio[i].classList.add("active")
-          let area = document.querySelector('#area1')
-          area.style.background = "red"
-        } else {
-          radio[i].classList.remove("active")
-        }
-      }
-    }
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
