@@ -21,33 +21,35 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-section{
+main{
     background-color: var(--section);
     width: 20rem;
     text-align: center;
-    padding: 1rem .5rem;
+    padding: 1rem .8rem ;
     border-radius: 1rem;
 }
 
-section img {
+main img {
     width: 95%;
     border-radius: 1rem ;
 }
 
 .text {
+    
     padding: 1.5rem .8rem 1rem;
     text-align:center;
 }
 
 .text h1 {
     color: var(--header);
-    margin-bottom: 1rem;
+    margin-bottom: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
 .text p{
     color: var(--paragraph);
-    font-size: 15px;
+    font-size: .9rem;
     font-weight: 400;
 }
 
@@ -57,9 +59,9 @@ section img {
 }
 
 @media screen and (max-width: 425px){
-    section{
+   main{
         background-color: var(--section);
-        width: 18rem;
+        max-width: 18rem;
         text-align: center;
         padding: 1rem .5rem;
         border-radius: 1rem;
